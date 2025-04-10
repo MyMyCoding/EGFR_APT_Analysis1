@@ -1,7 +1,9 @@
 import streamlit as st
 import pandas as pd
 import os
-from app.contact_analysis import get_contacts
+sys.path.append(os.path.dirname(__file__))  # 👈 enables relative import
+
+from contact_analysis import get_contacts
 
 st.title("🧬 EGFR–Aptamer Contact Comparison")
 
