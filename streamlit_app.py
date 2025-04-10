@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import os
-sys.path.append(os.path.dirname(__file__))  # 👈 enables relative import
-
 from contact_analysis import get_contacts
 
 st.title("🧬 EGFR–Aptamer Contact Comparison")
@@ -29,4 +27,4 @@ for model, contacts in contact_map.items():
     df[model] = [res in contacts for res in all_residues]
 
 st.dataframe(df.astype(bool))
-st.download_button("Download CSV", df.to_csv().encode(), file_name="contact_comparison.csv") 
+st.download_button("Download CSV", df.to_csv().encode(), file_name="contact_comparison.csv")
