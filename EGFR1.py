@@ -1,6 +1,3 @@
-### 🧠 **Step 4: Paste This into `app/contact_analysis.py`**
-
-```python
 from Bio.PDB import PDBParser
 
 def get_contacts(pdb_path, cutoff=5.0):
